@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMS College of Engineering (BMSCE)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Poppins:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="https://unpkg.com/framer-motion@12.26.1/dist/framer-motion.js"></script>
+  </head>
+  <body>
+    <div id="loadingScreen" class="loading-screen" aria-live="polite">
+      <div class="loading-card">
+        <div class="loading-spinner" aria-hidden="true"></div>
+        <div class="loading-text">
+          <div class="loading-title">BMSCE</div>
+          <div class="loading-subtitle">Preparing the official portal…</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="appLayout" class="app-layout">
+      <aside class="sidebar" aria-label="Primary navigation">
+        <div class="sidebar-inner">
+          <div class="sidebar-brand">
+            <img src="images/bms-logo.png" alt="BMSCE logo" class="brand-logo" loading="lazy" />
+            <div class="brand-text">
+              <div class="brand-name">BMS College of Engineering</div>
+              <div class="brand-tag">Official Portal</div>
+            </div>
+          </div>
+
+          <div class="sidebar-controls">
+            <button id="themeToggle" class="icon-pill" type="button" aria-label="Toggle dark mode">
+              <span class="icon-dot" aria-hidden="true"></span>
+              <span class="icon-pill-text">Theme</span>
+            </button>
+          </div>
+
+          <div class="sidebar-section">
+            <div class="sidebar-section-title">Quick Links</div>
+            <nav class="quick-links">
+              <a href="/admissions" data-nav class="quick-link">Admissions</a>
+              <a href="/departments" data-nav class="quick-link">Departments</a>
+              <a href="/placements" data-nav class="quick-link">Placements</a>
+            </nav>
+          </div>
+
+          <div class="sidebar-section">
+            <div class="sidebar-section-title">Highlights</div>
+            <div class="highlight-grid">
+              <a href="/about" data-nav class="highlight-card">
+                <div class="highlight-badge">NAAC</div>
+                <div class="highlight-title">Accreditation</div>
+                <div class="highlight-desc">Quality assurance, outcome-based learning, continuous improvement.</div>
+              </a>
+              <a href="/placements" data-nav class="highlight-card">
+                <div class="highlight-badge">Rankings</div>
+                <div class="highlight-title">Engineering Excellence</div>
+                <div class="highlight-desc">Consistent performance, recruiter confidence, and innovation metrics.</div>
+              </a>
+              <a href="/research" data-nav class="highlight-card">
+                <div class="highlight-badge">Awards</div>
+                <div class="highlight-title">Innovation & Impact</div>
+                <div class="highlight-desc">Student projects, publications, and multidisciplinary collaborations.</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="sidebar-footer">
+            <div class="sidebar-footer-item">
+              <div class="sidebar-footer-label">Admissions</div>
+              <div class="sidebar-footer-value">admissions@bmsce.ac.in</div>
+            </div>
+            <div class="sidebar-footer-item">
+              <div class="sidebar-footer-label">Call</div>
+              <div class="sidebar-footer-value">+91 80 2662 2130</div>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      <main class="main">
+        <header class="top-nav" aria-label="Main navigation">
+          <nav class="portal-nav" id="portalNav">
+            <a href="/" data-nav data-route="home" class="portal-link">Home</a>
+            <a href="/about" data-nav data-route="about" class="portal-link">About</a>
+            <a href="/academics" data-nav data-route="academics" class="portal-link">Academics</a>
+            <a href="/departments" data-nav data-route="departments" class="portal-link">Departments</a>
+            <a href="/placements" data-nav data-route="placements" class="portal-link">Placements</a>
+            <a href="/research" data-nav data-route="research" class="portal-link">Research</a>
+            <a href="/campus-life" data-nav data-route="campus-life" class="portal-link">Campus Life</a>
+            <a href="/students" data-nav data-route="students" class="portal-link">Students</a>
+            <a href="/alumni" data-nav data-route="alumni" class="portal-link">Alumni</a>
+            <a href="/contact" data-nav data-route="contact" class="portal-link">Contact</a>
+          </nav>
+        </header>
+
+        <div class="sticky-cta" aria-label="Quick actions">
+          <a href="/admissions" data-nav class="cta-btn cta-primary">Admissions</a>
+          <a href="/contact" data-nav class="cta-btn cta-outline">Contact</a>
+        </div>
+
+        <div id="mainScroll" class="main-scroll">
+          <div id="pageRoot" class="page-root" role="main"></div>
+
+          <footer class="site-footer">
+            <div class="footer-top">
+              <div class="footer-brand">
+                <div class="footer-logo-wrap">
+                  <img src="images/bms-logo.png" alt="BMSCE logo" class="footer-logo" loading="lazy" />
+                </div>
+                <div>
+                  <div class="footer-title">BMS College of Engineering</div>
+                  <div class="footer-subtitle">Bull Temple Road, Basavanagudi, Bengaluru, Karnataka 560019</div>
+                </div>
+              </div>
+
+              <div class="footer-grid">
+                <div class="footer-col">
+                  <div class="footer-heading">Quick Links</div>
+                  <a href="/admissions" data-nav class="footer-link">Admissions</a>
+                  <a href="/placements" data-nav class="footer-link">Placements</a>
+                  <a href="/research" data-nav class="footer-link">Research</a>
+                </div>
+
+                <div class="footer-col">
+                  <div class="footer-heading">Social</div>
+                  <a href="#" class="footer-link" aria-disabled="true">Facebook</a>
+                  <a href="#" class="footer-link" aria-disabled="true">Instagram</a>
+                  <a href="#" class="footer-link" aria-disabled="true">LinkedIn</a>
+                </div>
+
+                <div class="footer-col">
+                  <div class="footer-heading">Contact</div>
+                  <div class="footer-meta">admissions@bmsce.ac.in</div>
+                  <div class="footer-meta">+91 80 2662 2130</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="footer-bottom">© <span id="yearSpan"></span> BMS College of Engineering. All rights reserved.</div>
+          </footer>
+        </div>
+
+        <button id="toTopBtn" class="to-top" type="button" aria-label="Scroll to top" title="Back to top">
+          ↑
+        </button>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
